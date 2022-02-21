@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Torch : MonoBehaviour
 {
-    [SerializeField] float radiusFromPlayer = 2f;
+    [SerializeField] float radiusFromPlayer = 0.5f;
     private Player player;
     private Camera mainCamera;
     
@@ -38,6 +38,15 @@ public class Torch : MonoBehaviour
     void Update()
     {
         Rotate();
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            Ghost ghost = collision.GetComponent<Ghost>();
+            ghost.GetHurt(Time.deltaTime);
+        }
     }
 
 }
