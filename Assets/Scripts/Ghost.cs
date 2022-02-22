@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {
+ 
     [SerializeField] float deathDelay = 1f;
     [SerializeField] float secondsToDie = 3f;
     private float timeSpentBurning;
     Player player;
+
+    SpriteRenderer spriteRenderer;
 
     [SerializeField] float ghostSpeed = 2f;
     Rigidbody2D rigidBody;
@@ -16,6 +19,7 @@ public class Ghost : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
         rigidBody = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Start is called before the first frame update
@@ -31,6 +35,8 @@ public class Ghost : MonoBehaviour
         {
             Die();
         }
+
+        Fade();
     }
 
     private void Die()
@@ -55,7 +61,14 @@ public class Ghost : MonoBehaviour
         if (collision.tag == "Player")
         {
             Debug.Log("You Lose!");
+            Die();
         }
+    }
+
+    private void Fade()
+    {
+        Color spriteColour = spriteRenderer.color;
+        spriteRenderer.color = new Color(spriteColour.r, spriteColour.g, spriteColour.b, 1.2f - (timeSpentBurning / secondsToDie));
     }
 
 
