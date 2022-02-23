@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: cdd89166453fa614f95d61378e9ee062
+guid: 1f14208e81c5ecf43a889d2bb0ea0bd8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8214041153586509599
-    second: TileSheet_0
+      213: 4204879655560116554
+    second: Floor-Tilesheet_0
   - first:
-      213: 5005679780582531064
-    second: TileSheet_1
+      213: 4152605590902203268
+    second: Floor-Tilesheet_1
   - first:
-      213: 2849730303307528645
-    second: TileSheet_2
-  - first:
-      213: -5960618507970338917
-    second: TileSheet_3
+      213: -4360938768203311633
+    second: Floor-Tilesheet_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -78,7 +75,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -90,7 +87,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -102,7 +99,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -115,11 +112,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TileSheet_0
+      name: Floor-Tilesheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 224
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -129,18 +126,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e84906371dd10e80800000000000000
-      internalID: -8214041153586509599
+      spriteID: a497de0b4cbba5a30800000000000000
+      internalID: 4204879655560116554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSheet_1
+      name: Floor-Tilesheet_1
       rect:
         serializedVersion: 2
         x: 32
-        y: 224
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -150,18 +147,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ff1afc3d3fb77540800000000000000
-      internalID: 5005679780582531064
+      spriteID: 483e60298c401a930800000000000000
+      internalID: 4152605590902203268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSheet_2
+      name: Floor-Tilesheet_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 224
+        x: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -171,29 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c9bf42cc964c8720800000000000000
-      internalID: 2849730303307528645
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TileSheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9f1fc63c01a74da0800000000000000
-      internalID: -5960618507970338917
+      spriteID: fe5130aab45da73c0800000000000000
+      internalID: -4360938768203311633
       vertices: []
       indices: 
       edges: []
