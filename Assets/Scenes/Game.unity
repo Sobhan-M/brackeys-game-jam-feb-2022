@@ -234,7 +234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.58, y: -0.1000011, z: -10}
+  m_LocalPosition: {x: 0.22, y: 0.19, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -334,7 +334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714049668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.58, y: -0.1000011, z: -10}
+  m_LocalPosition: {x: 0.22, y: 0.19, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1464662134}
@@ -1367,7 +1367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 3.119999, z: 0}
+  m_TrackedObjectOffset: {x: 0, y: 1, z: 0}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
@@ -1382,7 +1382,7 @@ MonoBehaviour:
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.8
+  m_SoftZoneWidth: 1.29
   m_SoftZoneHeight: 0.8
   m_BiasX: 0
   m_BiasY: 0
@@ -3852,7 +3852,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1932071034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3919,25 +3919,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7482554383316944, guid: 3e32ba26c530975489cfae83ceeda127, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7482554383316944, guid: 3e32ba26c530975489cfae83ceeda127, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 7482554383316947, guid: 3e32ba26c530975489cfae83ceeda127, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7482554383316947, guid: 3e32ba26c530975489cfae83ceeda127, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.58
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 7482554383316947, guid: 3e32ba26c530975489cfae83ceeda127, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.22
+      value: -0.81
       objectReference: {fileID: 0}
     - target: {fileID: 7482554383316947, guid: 3e32ba26c530975489cfae83ceeda127, type: 3}
       propertyPath: m_LocalPosition.z
