@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Torch : MonoBehaviour
 {
-    [SerializeField] float radiusFromPlayer = 0.5f;
+    //[SerializeField] float radiusFromPlayer = 0.5f;
     private Player player;
     private Camera mainCamera;
     
@@ -16,7 +16,7 @@ public class Torch : MonoBehaviour
 
     void Start()
     {
-        transform.position = player.transform.position + new Vector3(radiusFromPlayer, 0, 0);
+        //transform.position = player.transform.position + new Vector3(radiusFromPlayer, 0, 0);
 
         mainCamera = Camera.main;
     }
@@ -30,9 +30,9 @@ public class Torch : MonoBehaviour
         float angleInDeg = angleInRad * Mathf.Rad2Deg;
 
         // Rotate the torch.
-        transform.rotation = Quaternion.AngleAxis(angleInDeg, Vector3.forward);
+        transform.rotation = Quaternion.Euler(0, 0, angleInDeg);
         // Move torch along the unit circle.
-        transform.localPosition = radiusFromPlayer * (new Vector3(Mathf.Cos(angleInRad), Mathf.Sin(angleInRad), 0));
+        //transform.localPosition = radiusFromPlayer * (new Vector3(Mathf.Cos(angleInRad), Mathf.Sin(angleInRad), 0));
     }
 
     void Update()

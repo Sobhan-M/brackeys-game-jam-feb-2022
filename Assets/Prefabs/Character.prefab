@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 000000005d9e72f869ce6671dd74b368bdee5f34
+  m_ApplyToSortingLayers: 000000005d9e72f8bf1aead569ce6671dd74b368bdee5f34
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -146,7 +146,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1756591325
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 87f772a58d24fea4bb5fd69674120b78, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -192,7 +192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3647d4cae2552d74485ae66d9ea37a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radiusFromPlayer: 0.5
 --- !u!60 &7482553206219049
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -296,7 +295,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1756591325
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0ab1c1714e83ce941bdfc1b1474d2b20, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -408,7 +407,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 000000005d9e72f869ce6671dd74b368bdee5f34
+  m_ApplyToSortingLayers: 000000005d9e72f8bf1aead569ce6671dd74b368bdee5f34
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
