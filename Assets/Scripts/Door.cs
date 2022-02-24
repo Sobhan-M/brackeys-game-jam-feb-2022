@@ -34,14 +34,12 @@ public class Door : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        DisplayInteract();
         canInteract = true;
         interactCanvas.gameObject.SetActive(false);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        RemoveInteract();
         canInteract = false;
         interactCanvas.gameObject.SetActive(false);
     }
