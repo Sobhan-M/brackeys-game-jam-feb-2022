@@ -7,11 +7,13 @@ public class Player : MonoBehaviour
     [SerializeField] float speed = 1f;
 	private Rigidbody2D rigidBody;
 	private GameObject torch;
+	private Animator animator;
 
 	void Awake()
     {
 		rigidBody = GetComponent<Rigidbody2D>();
 		torch = FindObjectOfType<Torch>().gameObject;
+		animator = GetComponent<Animator>();
     }
 
 	private void Move()
@@ -20,6 +22,15 @@ public class Player : MonoBehaviour
         // Vector2 velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rigidBody.velocity.y);
         // rigidBody.MovePosition(rigidBody.position + velocity * Time.fixedDeltaTime);
         FlipCharacter();
+
+		if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0)
+        {
+			animator.SetBool("IsWalking", true);
+        }
+		else
+        {
+			animator.SetBool("IsWalking", false);
+		}
 	}
 
 	private void FlipCharacter()
