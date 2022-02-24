@@ -6,14 +6,15 @@ public class Door : MonoBehaviour
 {
     [SerializeField] Canvas interactCanvas;
     private Collider2D doorCollider;
-    private SpriteRenderer doorSpriteRenderer;
+    private Animator animator;
 
     private bool canInteract = false;
+    private bool isOpen = false;
 
     private void Awake()
     {
         doorCollider = GetComponent<CapsuleCollider2D>();
-        doorSpriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -26,9 +27,10 @@ public class Door : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
         {
-            Color doorColour = doorSpriteRenderer.color;
             doorCollider.enabled = !doorCollider.enabled;
-            doorSpriteRenderer.color = new Color(doorColour.r, doorColour.g, doorColour.b, doorColour.a < 0.7f ? 1f : 0.5f);
+            
+            isOpen = !isOpen;
+            animator.SetBool("IsOpen", isOpen);
         }
     }
 
