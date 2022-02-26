@@ -7,11 +7,13 @@ public class Torch : MonoBehaviour
     //[SerializeField] float radiusFromPlayer = 0.5f;
     private Player player;
     private Camera mainCamera;
+    private Rigidbody2D rigidBody;
     
     
     void Awake()
     {
         player = FindObjectOfType<Player>();
+        rigidBody = GetComponent<Rigidbody2D>();
     }
 
     void Start()
@@ -30,23 +32,11 @@ public class Torch : MonoBehaviour
         float angleInDeg = angleInRad * Mathf.Rad2Deg;
 
         // Rotate the torch.
-        transform.rotation = Quaternion.Euler(0, 0, angleInDeg);
-        // Move torch along the unit circle.
-        //transform.localPosition = radiusFromPlayer * (new Vector3(Mathf.Cos(angleInRad), Mathf.Sin(angleInRad), 0));
+        rigidBody.MoveRotation(angleInDeg);
     }
 
     void Update()
     {
         Rotate();
     }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.tag == "Enemy")
-        {
-            Ghost ghost = collision.GetComponent<Ghost>();
-            ghost.GetHurt(Time.deltaTime);
-        }
-    }
-
 }

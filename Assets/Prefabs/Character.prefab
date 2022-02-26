@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7482553047610671}
   - component: {fileID: 7482553047611088}
-  m_Layer: 3
+  - component: {fileID: 1932279262}
+  - component: {fileID: 8391075478520199389}
+  m_Layer: 7
   m_Name: Torch Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,6 +75,48 @@ MonoBehaviour:
   - {x: 18.10482, y: 0.014429158, z: 0}
   - {x: 17.236115, y: 2.2790353, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!60 &1932279262
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7482553047610670}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -4.3777766, y: 14.792113}
+      - {x: -0.05850029, y: 0.011498183}
+      - {x: -0.013999283, y: -0.022717774}
+      - {x: 4.3492694, y: 14.74696}
+      - {x: 0.015996218, y: 15.397463}
+--- !u!114 &8391075478520199389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7482553047610670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48111704041a1f543983ea13fc62b0d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7482553206219043
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,8 +129,7 @@ GameObject:
   - component: {fileID: 7482553206219046}
   - component: {fileID: 7482553206219044}
   - component: {fileID: 7482553206219048}
-  - component: {fileID: 7482553206219049}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Torch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,35 +235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3647d4cae2552d74485ae66d9ea37a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &7482553206219049
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7482553206219043}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.0117067695, y: 0.103262275}
-      - {x: -0.01170674, y: -0.22533536}
-      - {x: 17.163, y: -1.8733243}
-      - {x: 17.254555, y: 2.0259159}
 --- !u!1 &7482554383316527
 GameObject:
   m_ObjectHideFlags: 0

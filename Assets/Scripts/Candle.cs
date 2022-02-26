@@ -2,35 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class Candle : MonoBehaviour
 {
     [SerializeField] Canvas interactCanvas;
-    private Collider2D doorCollider;
-    private Animator animator;
+    [SerializeField] GameObject lightSource;
 
     private bool canInteract = false;
-    private bool isOpen = false;
-
-    private void Awake()
-    {
-        doorCollider = GetComponent<CapsuleCollider2D>();
-        animator = GetComponent<Animator>();
-    }
 
     private void Start()
     {
-        doorCollider.enabled = true;
         interactCanvas.gameObject.SetActive(false);
+        lightSource.SetActive(false);
     }
 
-    private void InteractWithDoor()
+    private void InteractWithCandle()
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
         {
-            doorCollider.enabled = !doorCollider.enabled;
-            
-            isOpen = !isOpen;
-            animator.SetBool("IsOpen", isOpen);
+            lightSource.SetActive(!lightSource.activeSelf);
         }
     }
 
@@ -41,7 +30,6 @@ public class Door : MonoBehaviour
             canInteract = true;
             interactCanvas.gameObject.SetActive(true);
         }
-        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -53,10 +41,17 @@ public class Door : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        InteractWithDoor();
+        if (collision.tag == "Enemy")
+        {
+            Ghost ghost = collision.GetComponent<Ghost>();
+            ghost.GetHurt(Time.deltaTime);
+        }
     }
 
-
+    private void Update()
+    {
+        InteractWithCandle();
+    }
 }
