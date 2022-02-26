@@ -41,15 +41,6 @@ public class Candle : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.tag == "Enemy")
-        {
-            Ghost ghost = collision.GetComponent<Ghost>();
-            ghost.GetHurt(Time.deltaTime);
-        }
-    }
-
     private void Update()
     {
         InteractWithCandle();

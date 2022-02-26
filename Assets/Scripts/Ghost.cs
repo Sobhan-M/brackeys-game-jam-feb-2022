@@ -60,7 +60,7 @@ public class Ghost : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("You Lose!");
+            player.GetHurt();
             Die();
         }
     }

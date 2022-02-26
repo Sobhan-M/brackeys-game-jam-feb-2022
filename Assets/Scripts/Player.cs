@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class Player : MonoBehaviour
 	private GameObject torch;
 	private Animator animator;
 
+	[SerializeField] int playerHealth = 3;
+	[SerializeField] float dieDelay = 2f;
+	[SerializeField] Slider healthBar;
+
 	void Awake()
     {
 		rigidBody = GetComponent<Rigidbody2D>();
@@ -16,7 +21,12 @@ public class Player : MonoBehaviour
 		animator = GetComponent<Animator>();
     }
 
-	private void Move()
+    private void Start()
+    {
+		healthBar.value = playerHealth;
+    }
+
+    private void Move()
 	{
 		rigidBody.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rigidBody.velocity.y);
         // Vector2 velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rigidBody.velocity.y);
@@ -33,19 +43,38 @@ public class Player : MonoBehaviour
 		}
 	}
 
+	public void GetHurt()
+    {
+		--playerHealth;
+		healthBar.value = playerHealth;
+		if (playerHealth <= 0)
+        {
+			Invoke("Die", dieDelay);
+        }
+    }
+
+	public void Die()
+    {
+		Debug.Log("You Lose!");
+		// FindObjectOfType<GameManager>().LoadLose();
+    }
+
 	private void FlipCharacter()
     {
+		
 		if (Input.GetAxis("Horizontal") < 0)
         {
-			transform.localScale = new Vector3(-1, 1, 1);
-			torch.transform.localScale = new Vector3(-Mathf.Abs(torch.transform.localScale.x), torch.transform.localScale.y, torch.transform.localScale.z);
+			gameObject.GetComponent<SpriteRenderer>().flipX = true;
+			//transform.localScale = new Vector3(-1, 1, 1);
+			//torch.transform.localScale = new Vector3(-Mathf.Abs(torch.transform.localScale.x), torch.transform.localScale.y, torch.transform.localScale.z);
         }
 		else if (Input.GetAxis("Horizontal") > 0)
         {
-			transform.localScale = new Vector3(1, 1, 1);
-			torch.transform.localScale = new Vector3(Mathf.Abs(torch.transform.localScale.x), torch.transform.localScale.y, torch.transform.localScale.z);
+			gameObject.GetComponent<SpriteRenderer>().flipX = false;
+			//transform.localScale = new Vector3(1, 1, 1);
+			//torch.transform.localScale = new Vector3(Mathf.Abs(torch.transform.localScale.x), torch.transform.localScale.y, torch.transform.localScale.z);
 		}
-    }
+	}
 
 	void FixedUpdate()
     {

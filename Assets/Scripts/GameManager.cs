@@ -36,6 +36,16 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
     }
 
+    public void LoadWin()
+    {
+        SceneManager.LoadScene("Win Scene");
+    }
+
+    public void LoadLose()
+    {
+        SceneManager.LoadScene("Lose Scene");
+    }
+
     public void Quit()
     {
         Application.Quit(); 
