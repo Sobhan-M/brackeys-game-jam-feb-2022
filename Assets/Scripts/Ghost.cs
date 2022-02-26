@@ -48,6 +48,14 @@ public class Ghost : MonoBehaviour
     {
         Vector3 playerPosition = player.transform.position;
         Vector2 target = Vector2.MoveTowards(rigidBody.position, new Vector2(playerPosition.x, playerPosition.y), ghostSpeed*Time.deltaTime);
+        if (target.x < gameObject.transform.position.x)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (target.x > gameObject.transform.position.x)
+        {
+            spriteRenderer.flipX = false;
+        }
         rigidBody.MovePosition(target);
     }
 

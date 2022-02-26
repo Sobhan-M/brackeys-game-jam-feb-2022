@@ -137,6 +137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactCanvas: {fileID: 0}
+  openingSound: {fileID: 8300000, guid: 0703d1908bc7b7443b49b590c02a88d1, type: 3}
+  closingSound: {fileID: 8300000, guid: 76c55c4905edcea41a600fb78f7bcd22, type: 3}
 --- !u!61 &5809935747678231873
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathDelay: 0
   secondsToDie: 0.5
-  ghostSpeed: 2
+  ghostSpeed: 3
 --- !u!50 &5486360448177048372
 Rigidbody2D:
   serializedVersion: 4

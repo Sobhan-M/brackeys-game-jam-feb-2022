@@ -11,6 +11,9 @@ public class Door : MonoBehaviour
     private bool canInteract = false;
     private bool isOpen = false;
 
+    [SerializeField] AudioClip openingSound;
+    [SerializeField] AudioClip closingSound;
+
     private void Awake()
     {
         doorCollider = GetComponent<CapsuleCollider2D>();
@@ -31,6 +34,15 @@ public class Door : MonoBehaviour
             
             isOpen = !isOpen;
             animator.SetBool("IsOpen", isOpen);
+
+            if (isOpen)
+            {
+                AudioSource.PlayClipAtPoint(openingSound, transform.position);
+            }
+            else
+            {
+                AudioSource.PlayClipAtPoint(closingSound, transform.position);
+            }
         }
     }
 

@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thingsToSpawn: []
+  ghostNoises: {fileID: 8300000, guid: 73e638b33e42dd34cbce8622d1fdcb39, type: 3}
 --- !u!61 &9027407576110519326
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -69,5 +70,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0

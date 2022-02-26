@@ -14,11 +14,14 @@ public class Player : MonoBehaviour
 	[SerializeField] float dieDelay = 2f;
 	[SerializeField] Slider healthBar;
 
+	AudioSource walkingSound;
+
 	void Awake()
     {
 		rigidBody = GetComponent<Rigidbody2D>();
 		torch = FindObjectOfType<Torch>().gameObject;
 		animator = GetComponent<Animator>();
+		walkingSound = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -36,10 +39,16 @@ public class Player : MonoBehaviour
 		if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0)
         {
 			animator.SetBool("IsWalking", true);
-        }
+			if (! walkingSound.isPlaying)
+            {
+				walkingSound.Play();
+            }
+
+		}
 		else
         {
 			animator.SetBool("IsWalking", false);
+			walkingSound.Stop();
 		}
 	}
 
