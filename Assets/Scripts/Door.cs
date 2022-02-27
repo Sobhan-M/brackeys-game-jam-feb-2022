@@ -37,11 +37,11 @@ public class Door : MonoBehaviour
 
             if (isOpen)
             {
-                AudioSource.PlayClipAtPoint(openingSound, transform.position);
+                AudioSource.PlayClipAtPoint(openingSound, transform.position, 10f);
             }
             else
             {
-                AudioSource.PlayClipAtPoint(closingSound, transform.position);
+                AudioSource.PlayClipAtPoint(closingSound, transform.position, 10f);
             }
         }
     }
