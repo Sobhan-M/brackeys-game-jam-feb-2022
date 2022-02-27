@@ -64,8 +64,7 @@ public class Player : MonoBehaviour
 
 	public void Die()
     {
-		Debug.Log("You Lose!");
-		// FindObjectOfType<GameManager>().LoadLose();
+		FindObjectOfType<GameManager>().LoadLose();
     }
 
 	private void FlipCharacter()

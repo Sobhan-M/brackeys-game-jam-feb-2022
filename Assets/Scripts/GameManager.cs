@@ -18,7 +18,11 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        pauseMenu.gameObject.SetActive(false);
+        Time.timeScale = 1;
+        if (canPause)
+        {
+            pauseMenu.gameObject.SetActive(false);
+        }   
     }
 
     public void LoadNextScene()
